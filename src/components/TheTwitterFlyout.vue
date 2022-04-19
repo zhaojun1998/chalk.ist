@@ -36,9 +36,5 @@ import { showTwitterFlyout, store } from "~/composables/store";
 import IconClose from "~/components/IconClose.vue";
 
 onBeforeMount(async () => {
-  let script = document.createElement("script");
-  script.setAttribute("charset", "utf-8");
-  script.setAttribute("src", "https://platform.twitter.com/widgets.js");
-  document.body.insertAdjacentElement("beforeend", script);
 });
 </script>
