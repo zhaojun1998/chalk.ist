@@ -11,7 +11,7 @@
         <div ref="expandableContent">
           <div class="grid gap-y-5 px-3 py-4">
             <div class="grid gap-y-2 justify-start">
-              <label class="font-semibold text-xs">Theme</label>
+              <label class="font-semibold text-xs">主题</label>
               <div class="grid grid-flow-col items-center gap-x-2">
                 <button
                   v-for="theme in themes"
@@ -31,7 +31,7 @@
             </div>
 
             <div class="grid gap-y-1">
-              <label for="language" class="font-semibold text-xs">Language</label>
+              <label for="language" class="font-semibold text-xs">语言</label>
               <BaseSelect
                 id="language"
                 :model-value="store.language"
@@ -43,7 +43,7 @@
             <div class="grid gap-y-2">
               <div class="grid grid-flow-col gap-y-2 items-center grid-cols-[1fr_auto_auto] gap-x-2">
                 <label class="font-semibold text-xs select-none cursor-pointer" for="showTwitterBadge"
-                  >Twitter Badge</label
+                  >Twitter 徽章</label
                 >
                 <BaseButton
                   class="text-blue-500 px-2.5 font-semibold text-xs bg-blue-600/30 hover:bg-blue-600/40 h-5 rounded"
@@ -147,17 +147,17 @@
               </div>
 
               <div class="grid grid-flow-col gap-y-2 items-center justify-between gap-x-2">
-                <label class="font-semibold text-xs select-none cursor-pointer" for="showBackground">Background</label>
+                <label class="font-semibold text-xs select-none cursor-pointer" for="showBackground">背景颜色</label>
                 <BaseSwitch v-model="store.showBackground" id="showBackground" />
               </div>
 
               <div class="grid grid-flow-col gap-y-2 items-center justify-between gap-x-2">
-                <label class="font-semibold text-xs select-none cursor-pointer" for="reflection">Reflection</label>
+                <label class="font-semibold text-xs select-none cursor-pointer" for="reflection">光线反射</label>
                 <BaseSwitch v-model="store.reflection" id="reflection" />
               </div>
 
               <div class="grid grid-flow-col gap-y-2 items-center justify-between gap-x-2">
-                <label class="font-semibold text-xs select-none cursor-pointer" for="paddingX">Padding X</label>
+                <label class="font-semibold text-xs select-none cursor-pointer" for="paddingX">x 轴内边距</label>
                 <div class="grid gap-x-2 grid-flow-col text-sm">
                   <input
                     id="paddingX"
@@ -173,7 +173,7 @@
               </div>
 
               <div class="grid grid-flow-col gap-y-2 items-center justify-between gap-x-2">
-                <label class="font-semibold text-xs select-none cursor-pointer" for="paddingY">Padding Y</label>
+                <label class="font-semibold text-xs select-none cursor-pointer" for="paddingY">y 轴内边距</label>
                 <div class="grid gap-x-2 grid-flow-col text-sm">
                   <input
                     id="paddingY"
@@ -189,7 +189,7 @@
               </div>
 
               <div class="grid grid-flow-col gap-y-2 items-center justify-between gap-x-2">
-                <label class="font-semibold text-xs select-none cursor-pointer" for="diff">Diff</label>
+                <label class="font-semibold text-xs select-none cursor-pointer" for="diff">差异比对</label>
                 <BaseSwitch v-model="store.diff" id="diff" />
               </div>
             </div>
@@ -199,7 +199,7 @@
         <div
           class="grid grid-cols-[1fr_auto_1fr] sm:grid-cols-1 gap-2 fixed inset-x-0 bottom-0 py-2 px-3 bg-slate-800 sm:static sm:bg-transparent sm:px-3 sm:py-0"
         >
-          <label class="font-semibold text-xs hidden sm:block">Export</label>
+          <label class="font-semibold text-xs hidden sm:block">导出</label>
           <BaseButton
             class="px-4 w-full bg-emerald-600/30 text-emerald-500 hover:bg-emerald-600/40 group"
             @click="handleCopy"
@@ -210,10 +210,10 @@
                 exportState === ExportState.PreparingToCopy
                   ? "..."
                   : exportState === ExportState.JustCopied
-                  ? "Copied!"
+                  ? "已保存至剪贴板!"
                   : exportState === ExportState.CopyFailure
-                  ? "Error! Try to download"
-                  : "Copy to Clipboard"
+                  ? "错误! 尝试下载"
+                  : "保存至剪贴板"
               }}
             </span>
           </BaseButton>
@@ -240,8 +240,8 @@
                 exportState === ExportState.PreparingToDownload
                   ? "..."
                   : exportState === ExportState.JustDownloaded
-                  ? "Downloaded!"
-                  : "Download PNG"
+                  ? "下载完成!"
+                  : "下载为 PNG"
               }}
             </span>
           </BaseButton>

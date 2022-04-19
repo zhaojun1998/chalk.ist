@@ -8,7 +8,7 @@
         'opacity-0 pointer-events-none translate-y-12': !showTwitterFlyout || !store.enableTwitterFlyout,
       }"
     >
-      <span class="text-slate-400 font-medium text-sm">Want to get updates about new chalk.ist features? </span>
+      <span class="text-slate-400 font-medium text-sm">想要获取最新的关于 chalk.ist 的特性么? </span>
 
       <a
         href="https://twitter.com/Idered?ref_src=chalk.ist"

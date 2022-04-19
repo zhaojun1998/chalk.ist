@@ -46,14 +46,14 @@ export const DEFAULT_EDITOR_CONFIG: monaco.editor.IStandaloneDiffEditorConstruct
 
 export const AVAILABLE_LANGUAGES = [
   {
-    group: "Data",
+    group: "数据",
     children: [
       { value: "json", label: "JSON" },
       { value: "yaml", label: "YAML" },
     ],
   },
   {
-    group: "Markup",
+    group: "标记语言",
     children: [
       { value: "handlebars", label: "Handlebars" },
       { value: "html", label: "HTML" },
@@ -62,7 +62,7 @@ export const AVAILABLE_LANGUAGES = [
     ],
   },
   {
-    group: "Script",
+    group: "脚本",
     children: [
       { value: "javascript", label: "JavaScript" },
       { value: "typescript", label: "TypeScript" },
@@ -70,10 +70,15 @@ export const AVAILABLE_LANGUAGES = [
     ],
   },
   {
-    group: "Style",
+    group: "样式",
     children: [
       { value: "css", label: "CSS" },
       { value: "scss", label: "SCSS" },
     ],
-  },
+  },{
+    group: "其他",
+    children: [
+      { value: "java", label: "JAVA" }
+    ]
+  }
 ]; //.sort((a, b) => a.label.localeCompare(b.label));
